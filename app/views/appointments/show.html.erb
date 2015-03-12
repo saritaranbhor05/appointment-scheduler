@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Visit date:</strong>
+  <%= datetime_format(@appointment.visit_date) %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @appointment.reason %>
+</p>
+
+<p>
+  <strong>Required reminder:</strong>
+  <%= @appointment.required_reminder %>
+</p>
+
+<p>
+  <strong>Pet:</strong>
+  <%= @appointment.pet.name %>
+</p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path(pet_id: @appointment.pet_id) %>
